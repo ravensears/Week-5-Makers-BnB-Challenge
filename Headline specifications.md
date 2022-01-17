@@ -50,30 +50,5 @@ As a host,
 So that I can manage my bookings,
 I need my spaces to be available until I confirm booking requests.
 
-
-
-
-
-
-Development workflow
-- Create a Github issue in the relevant repository relating to the user story or bug.
-
-****documentation about github issues: https://docs.github.com/en/issues
-
-- When you are ready to work on the user story, create a branch for it, e.g. dates-on-apply-page.
-
-- Pair on implementing the user story.
-
-- When you are done, create a pull request from your branch to main.
-
-- Get another member of the team to review your PR.
-
-- Use the pull request comments section to discuss the code and make improvements until the code reviewing pair are satisfied.
-
-- When you get a thumbs up or other similarly appropriate emoji, merge your PR.
-
-- When you're happy, merge your changes on GitHub. You should then deploy immediately. If you have CI setup you can get it to do this for you automatically.
-
-- Do some QA on your live site if you have it set up.
-
-- High-five someone/something.
+<img width="344" alt="Screenshot 2022-01-17 at 12 08 41" src="https://user-images.githubusercontent.com/76707857/149793229-1b3b7f0c-ca01-4730-b02e-7828c7ed88dd.png">
+<img width="344" alt="Screenshot 2022-01-17 at 12 08 28" src="https://user-images.githubusercontent.com/76707857/149793239-809dcd5f-25fa-4e73-9dc1-37a9c461fb92.png">
