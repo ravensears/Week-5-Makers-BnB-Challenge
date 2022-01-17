@@ -68,8 +68,8 @@ bundle install
 To create databases for production and test enviroments, run the following on psql: 
 
 ```
-CREATE DATABASE cherbnb
-CREATE DATABASE cherbnb_test
+CREATE DATABASE cherbnb;
+CREATE DATABASE cherbnb_test;
 ```
 
 Connect to each database and create the following tables:
