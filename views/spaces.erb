@@ -1,3 +1,11 @@
-Name: House on the Hills
-Description: 12 bedroom with own private beach
-Price: 1200 per week
+
+<ul>
+  <% @space.each do |space| %>
+    <li>
+        <%= space.name %>
+        <%= space.description %>
+        <%= space.price %>
+    </li>
+  <% end %>
+</ul>
+
