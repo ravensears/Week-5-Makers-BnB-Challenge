@@ -90,7 +90,6 @@ CREATE TABLE spaces(
   price VARCHAR(60)
   );
 ```
-Hello
 
 
 
