@@ -1,7 +1,7 @@
 require './lib/database_connection'
 
 if ENV['ENVIRONMENT'] == 'test'
-  DatabaseConnection.setup('cherbnb_test')
+  DatabaseConnection.connect('cherbnb_test')
 else
-  DatabaseConnection.setup('cherbnb')
+  DatabaseConnection.connect('cherbnb')
 end
