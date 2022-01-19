@@ -5,8 +5,7 @@ require './lib/user'
 
 class Cherbnb < Sinatra::Base
   enable :sessions
-  
-  configure :development do
+    configure :development do
     register Sinatra::Reloader
   end
 
