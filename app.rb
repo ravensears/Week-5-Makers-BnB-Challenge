@@ -2,6 +2,8 @@ require 'sinatra/base'
 require 'sinatra/reloader'
 require './database_connection_setup'
 require './lib/user'
+require './lib/space'
+
 
 class Cherbnb < Sinatra::Base
   enable :sessions
@@ -21,6 +23,20 @@ class Cherbnb < Sinatra::Base
   post '/users' do
     session[:user] = User.create(name: params[:name], username: params[:username], email: params[:email], password: params[:password], )
     redirect '/'
+  end
+
+  get '/spaces/new' do
+    erb :new_spaces
+  end
+
+  get '/spaces' do
+    @space = Space.all
+    erb :spaces
+  end
+
+  post '/spaces' do
+    Space.create(name: params[:name], description: params[:description], price: params[:price])
+    redirect '/spaces'
   end
 
   run! if app_file == $0
