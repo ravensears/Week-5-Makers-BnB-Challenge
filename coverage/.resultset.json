@@ -34,8 +34,58 @@
           null,
           null
         ]
+      },
+      "/Users/neto/Projects/Week-5-Makers-BnB-Challenge/spec/features/new_space_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/neto/Projects/Week-5-Makers-BnB-Challenge/spec/space_spec.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
       }
     },
+    "timestamp": 1642520641
     "timestamp": 1642505120
   }
 }

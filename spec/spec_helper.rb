@@ -7,6 +7,8 @@ require 'capybara/rspec'
 require 'rspec'
 require 'simplecov'
 require 'simplecov-console'
+require 'database_helper'
+require 'setup_test_database'
 
 Capybara.app = Cherbnb
 
