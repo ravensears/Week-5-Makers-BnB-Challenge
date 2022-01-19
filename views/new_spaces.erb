@@ -1,7 +1,43 @@
-<form action="/spaces" method="post">
-List a space
-  <input type="text" name="name" placeholder="Name"/>
-  <input type="text" name="description" placeholder="Description"/>
-  <input type="number" name="price" placeholder="Price"/>
-  <input type="submit" name="List It!"/>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="<%= url('/style.css') %>" type="text/css" />
+  <title>Document</title>
+</head>
+<body>
+
+<!--        NAVIGATION MENU           -->
+
+  <nav>
+    <div class="menu">
+      <div class="logo">
+        <a href="#">CherBnB</a>
+      </div>
+      <ul>
+        <li><a href="/spaces">Spaces</a></li>
+        <li><a href="#">Requests</a></li>
+        <li><a href="#">Signout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!--        MAIN PAGE           -->
+  
+  <div class="center">
+  <form action="/spaces" method="post">
+    List a space
+      <input type="text" name="name" placeholder="Name"/>
+      <input type="text" name="description" placeholder="Description"/>
+      <input type="number" name="price" placeholder="Price"/>
+      <input type="submit" name="List It!"/>
+    </form>
+  <div class="center">
+</body>
+</html>
+
+
+
+
