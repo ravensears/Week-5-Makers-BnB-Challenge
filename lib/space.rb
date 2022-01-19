@@ -15,7 +15,8 @@ class Space
 
   def self.create(name:, description:, price:, start_date:, end_date:)
     result = DatabaseConnection.query(
-      "INSERT INTO spaces (name, description, price, start_date, end_date) VALUES($1, $2, $3, $4, $5) 
+      "INSERT INTO spaces (name, description, price, start_date, end_date) 
+      VALUES($1, $2, $3, $4, $5) 
       RETURNING id, name, description, price, start_date, end_date", 
       [name, description, price, start_date, end_date]
       )
@@ -31,16 +32,4 @@ class Space
       price: space['price'], start_date: space['start_date'], end_date: space['end_date'])
     end
   end
-
- # def self.available?(start_date:, end_date:)
- #   result = DatabaseConnection.query(
- #     "SELECT * FROM bookings
- #     WHERE id = $1
- #     AND (($2 BETWEEN start_date AND end_date) OR ($3 BETWEEN start_date AND end_date))
- #     OR bnb_id = $1 AND ((start_date BETWEEN $2 AND $3) OR (end_date BETWEEN $2 AND $3))
- #     ;",
- #     [start_date, end_date]
- #   )
- #   !result.any?
- # end
 end

@@ -5,4 +5,3 @@ def persisted_data(id)
   result = connection.query("SELECT * FROM spaces WHERE id = #{id};")
   result.first
 end
-

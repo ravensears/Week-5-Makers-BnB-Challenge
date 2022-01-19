@@ -4,12 +4,12 @@ require './database_connection_setup'
 require './lib/user'
 require './lib/space'
 
-
 class Cherbnb < Sinatra::Base
-  enable :sessions
-    configure :development do
+  configure :development do
     register Sinatra::Reloader
   end
+  
+  enable :sessions
 
   get '/' do
     @user = session[:user]
@@ -21,7 +21,8 @@ class Cherbnb < Sinatra::Base
   end
 
   post '/users' do
-    session[:user] = User.create(name: params[:name], username: params[:username], email: params[:email], password: params[:password])
+    session[:user] = User.create(name: params[:name], username: params[:username], 
+      email: params[:email], password: params[:password])
     redirect '/'
   end
 
@@ -35,7 +36,8 @@ class Cherbnb < Sinatra::Base
   end
 
   post '/spaces' do
-    Space.create(name: params[:name], description: params[:description], price: params[:price], start_date: params[:start_date], end_date: params[:end_date] )
+    Space.create(name: params[:name], description: params[:description], price: params[:price], 
+      start_date: params[:start_date], end_date: params[:end_date])
     redirect '/spaces'
   end
 
