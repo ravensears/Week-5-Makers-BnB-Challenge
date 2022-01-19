@@ -5,6 +5,9 @@
         <%= space.name %>
         <%= space.description %>
         <%= space.price %>
+        <form method="get" action="/spaces/<%= space.id %>">
+          <input type="submit" value="View Space">
+        </form>
     </li>
   <% end %>
 </ul>

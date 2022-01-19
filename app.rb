@@ -34,6 +34,16 @@ class Cherbnb < Sinatra::Base
     erb :spaces
   end
 
+  get '/spaces/:id' do
+    @message = session[:message]
+    erb :"requests/booking"
+  end
+
+  post '/requests' do
+    session[:message] = 'Your request was successfully submitted to Cher'
+    redirect '/spaces/:id'
+  end
+
   post '/spaces' do
     Space.create(name: params[:name], description: params[:description], price: params[:price])
     redirect '/spaces'
