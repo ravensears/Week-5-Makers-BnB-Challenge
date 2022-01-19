@@ -1,5 +1,5 @@
 # Ignore coverage folder
-coverage
+coverage/
 
 #Ignore Gemfile.lock
 Gemfile.lock
