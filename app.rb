@@ -21,7 +21,7 @@ class Cherbnb < Sinatra::Base
   end
 
   post '/users' do
-    session[:user] = User.create(name: params[:name], username: params[:username], email: params[:email], password: params[:password], )
+    session[:user] = User.create(name: params[:name], username: params[:username], email: params[:email], password: params[:password])
     redirect '/'
   end
 
@@ -35,7 +35,7 @@ class Cherbnb < Sinatra::Base
   end
 
   post '/spaces' do
-    Space.create(name: params[:name], description: params[:description], price: params[:price])
+    Space.create(name: params[:name], description: params[:description], price: params[:price], start_date: params[:start_date], end_date: params[:end_date] )
     redirect '/spaces'
   end
 
