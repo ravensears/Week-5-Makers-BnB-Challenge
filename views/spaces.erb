@@ -10,6 +10,9 @@
         <%= space.start_date %>
         to
         <%= space.end_date %>
+        <form method="get" action="/spaces/<%= space.id %>">
+          <input type="submit" value="View Space">
+        </form>
     </li>
   <% end %>
 </ul>
