@@ -1,6 +1,6 @@
 feature 'New Booking Request' do
   scenario 'A registered user can request to book a space for the night' do
-    space = Space.create(name: "Cher's house", description: "It's fab", price: "2000")
+    space = Space.create(name: "Cher's house", description: "It's fab", price: "2000", start_date: "10/01/2022", end_date: "12/01/2022")
     visit "/spaces"
     click_on 'View Space'
 
