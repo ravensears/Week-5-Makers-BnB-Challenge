@@ -1,7 +1,60 @@
-<form method="post" action="/users">
-  <input type="text" name="name" placeholder="name..">
-  <input type="text" name="username" placeholder="username..">
-  <input type="email" name="email" placeholder="Email..">
-  <input type="password" name="password" placeholder="Password..">
-  <input type="submit" value="signup">
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="<%= url('/style.css') %>" type="text/css" />
+  <title>Document</title>
+</head>
+<body>
+
+<!--        NAVIGATION MENU           -->
+
+  <nav>
+    <div class="menu">
+      <div class="logo">
+        <a href="#">CherBnB</a>
+      </div>
+      <ul>
+        <li><a href="/spaces">Spaces</a></li>
+        <li><a href="#">Requests</a></li>
+        <li><a href="#">Signout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!--        MAIN PAGE           -->
+
+  <div class="img">
+
+  
+  <div class="center">
+    <h1>Im Cher, b*tch! How about you?</h1>
+    <form method="post" action="/users">
+    <ul class="form-style-1">
+      <li>
+          <label>Name <span class="required">*</span></label>
+          <input type="text" name="name" class="field-long" />
+      </li>
+      <li>
+          <label>Username <span class="required">*</span></label>
+          <input type="text" name="username" class="field-long" />
+      </li>
+      <li>
+          <label>Email <span class="required">*</span></label>
+          <input type="email" name="email" class="field-long" />
+      </li>
+      <li>
+          <label>Password <span class="required">*</span></label>
+          <input type="password" name="password" class="field-long" />
+      </li>
+      <li>
+          <input type="submit" value="signup" />
+      </li>
+    </ul>
+  </form>
+  </div>
+  </div>
+</body>
+</html>

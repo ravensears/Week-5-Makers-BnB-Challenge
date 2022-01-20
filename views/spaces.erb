@@ -1,11 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="<%= url('/style.css') %>" type="text/css" />
+  <title>Document</title>
+</head>
+<body>
 
-<ul>
-  <% @space.each do |space| %>
-    <li>
-        <%= space.name %>
-        <%= space.description %>
-        <%= space.price %>
-    </li>
-  <% end %>
-</ul>
+<!--        NAVIGATION MENU           -->
+
+  <nav>
+    <div class="menu">
+      <div class="logo">
+        <a href="#">CherBnB</a>
+      </div>
+      <ul>
+        <li><a href="/spaces">Spaces</a></li>
+        <li><a href="#">Requests</a></li>
+        <li><a href="#">Signout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!--        MAIN PAGE           -->
+  <div class="container">
+  <div class="center">
+  <h1>Do you believe in life after silk bed linen?</h1>
+    <ul class="spaces">
+    <% @space.each do |space| %>
+      <li>
+        <ul class="spaces_info">
+          <li class="space_name"><%= space.name %></li>
+          <li class="space_description"><%= space.description %></li>
+          <li class="space_price"><%= space.price %></li>
+        </ul>
+      </li>
+    <% end %>
+    </ul>
+  </div>
+  </div>
+
+</body>
+</html>
+
+<!--
+
+-->
+
 

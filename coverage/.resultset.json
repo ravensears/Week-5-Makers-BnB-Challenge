@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/nasteha/Projects/Week-5-Makers-BnB-Challenge/spec/database_connection_spec.rb": {
+      "/Users/neto/Projects/Week-5-Makers-BnB-Challenge/spec/database_connection_spec.rb": {
         "lines": [
           1,
           1,
@@ -22,54 +22,6 @@
           1,
           null,
           null,
-          null
-        ]
-      },
-      "/Users/nasteha/Projects/Week-5-Makers-BnB-Challenge/spec/features/register_spec.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/nasteha/Projects/Week-5-Makers-BnB-Challenge/spec/user_spec.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/nasteha/Projects/Week-5-Makers-BnB-Challenge/spec/database_helper.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          0,
-          0,
-          0,
           null
         ]
       },
@@ -90,6 +42,26 @@
           1,
           1,
           null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/neto/Projects/Week-5-Makers-BnB-Challenge/spec/features/register_spec.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
           1,
           1,
           1,
@@ -121,10 +93,25 @@
           null,
           null
         ]
+      },
+      "/Users/neto/Projects/Week-5-Makers-BnB-Challenge/spec/user_spec.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
       }
     },
-
-    "timestamp": 1642524310
-
+    "timestamp": 1642632766
   }
 }
