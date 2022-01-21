@@ -13,6 +13,9 @@ group :test do
   gem 'simplecov-console', require: false
   gem 'sinatra'
   gem 'sinatra-contrib'
+  gem 'sinatra-flash'
+  gem 'flash'
+  gem 'bcrypt'
 end
 
 group :development, :test do
