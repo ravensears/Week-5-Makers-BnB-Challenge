@@ -1,5 +1,5 @@
 feature 'authentication' do
-  scenario 'users get an error for wrong email or password' do
+  scenario 'users get an error for wrong email' do
     User.create(name: 'test', username: 'test1', email: 'test@example.com', password: 'password123')
     
     visit('/sessions/new')
@@ -8,6 +8,19 @@ feature 'authentication' do
     click_button('log in')
 
     expect(page).not_to have_content 'Welcome, wrongemail@example.com'
-    expect(page).not_to have_content 'Please check your email or password'
+    expect(page).to have_content 'Please check your email or password'
   end
+
+  scenario 'users get an error for wrong password' do
+    User.create(name: 'test', username: 'test1', email: 'test@example.com', password: 'password123')
+    
+    visit('/sessions/new')
+    fill_in('email', with: 'test@example.com')
+    fill_in('password', with: 'wrongpassword123')
+    click_button('log in')
+
+    expect(page).not_to have_content 'Welcome, test@example.com'
+    expect(page).to have_content 'Please check your email or password'
+  end
+  
 end

@@ -6,11 +6,11 @@ require './lib/user'
 require './lib/space'
 
 class Cherbnb < Sinatra::Base
+  enable :sessions
+
   configure :development do
     register Sinatra::Reloader
   end
-  
-  enable :sessions
 
   get '/' do
     @user = User.find(id: session[:user_id])
@@ -55,6 +55,7 @@ class Cherbnb < Sinatra::Base
   end
 
   get '/sessions/new' do
+    @error_email_message = session[:error_email_message]
     erb :'/sessions/new'
   end
 
@@ -65,8 +66,8 @@ class Cherbnb < Sinatra::Base
       session[:user_id] = user.id
       redirect '/'
     else 
-      flash[:notice] = 'Please check your email or password'
-      redirect('/sessions/new')
+      session[:error_email_message] = 'Please check your email or password'
+      redirect '/sessions/new'
     end
   end
 
