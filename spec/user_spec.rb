@@ -21,6 +21,12 @@ describe '.authenticate' do
     expect(authenticated_user.id).to eq user.id
 
   end
+
+  it 'return nil given an incorrect email address' do
+    User.create(name: 'test', username: 'test1', email: 'test@example.com', password: 'password123')
+
+    expect(User.authenticate(email: 'wrongemail@example.com', password: 'wrongpassword123')).to be_nil
+  end
 end
 
 describe '.find' do
