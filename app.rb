@@ -14,6 +14,7 @@ class Cherbnb < Sinatra::Base
 
   get '/' do
     @user = User.find(id: session[:user_id])
+    @message = session[:message]
     erb :index
   end
 
@@ -57,6 +58,13 @@ class Cherbnb < Sinatra::Base
   get '/sessions/new' do
     @error_email_message = session[:error_email_message]
     erb :'/sessions/new'
+  end
+
+  post '/sessions/destroy' do
+    session.clear
+    session[:message] = 'You have signed out.'
+    #flash[:notice] = 'You have signed out.'
+    redirect('/')
   end
 
   post '/sessions' do
