@@ -72,6 +72,7 @@ class Cherbnb < Sinatra::Base
 
     if user 
       session[:user_id] = user.id
+      session[:message] = nil
       redirect '/'
     else 
       session[:error_email_message] = 'Please check your email or password'
